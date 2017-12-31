@@ -1,0 +1,14 @@
+{
+  "name": "template",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.2.0",
+    "coffeescript": "1.12.7",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "stimulus": "^0.9.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.7"
+  }
+}
