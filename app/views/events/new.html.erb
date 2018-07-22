@@ -1,0 +1,13 @@
+<h1>New Event</h1>
+
+<div
+  data-controller='unsaved-changes'
+  data-action='beforeunload@window->unsaved-changes#leavingPage turbolinks:before-change@window->unsaved-chages#leavingPage'
+  data-usaved-cahges-changed='false'
+>
+
+  <%= render 'form', event: @event %>
+
+  <%= link_to 'Back', events_path, data: { action: 'click->unsaved-changes#leavingPage' } %>
+
+</div>
