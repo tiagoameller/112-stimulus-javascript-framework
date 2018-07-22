@@ -1,4 +1,4 @@
-<%= form_with(model: event, local: true) do |form| %>
+<%= form_with(model: event, local: true, data: { controller: 'required' }) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :event_name, data: { action: 'change->unsaved-changes#formIsChanged' } %>
+    <%= form.text_field :name, id: :event_name, data: { action: 'change->unsaved-changes#formIsChanged change->required#itemIsChanged' } %>
   </div>
 
   <div class="field">
     <%= form.label :venue %>
-    <%= form.text_field :venue, id: :event_venue, data: { action: 'change->unsaved-changes#formIsChanged' } %>
+    <%= form.text_field :venue, id: :event_venue, data: { action: 'change->unsaved-changes#formIsChanged change->required#itemIsChanged' } %>
   </div>
 
   <div class="field">
